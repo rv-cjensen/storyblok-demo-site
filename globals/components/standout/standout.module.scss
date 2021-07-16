@@ -1,0 +1,23 @@
+@import "@globals/styles/components";
+@import "@globals/styles/utils";
+
+.standout {
+  .card {
+    @include card($card-bg);
+    @include bgWave($card-bg-img-color);
+    position: relative;
+
+    // TODO: REFACTOR STANDOUT SO LOGO IS DYNAMIC
+    &::after {
+      content: " ";
+      display: block;
+      position: absolute;
+      right: 15px;
+      bottom: 15px;
+      width: 75px;
+      height: 12px;
+      @include hlLogo($color-gold);
+    }
+  }
+}
+

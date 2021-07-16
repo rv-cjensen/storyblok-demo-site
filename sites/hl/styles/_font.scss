@@ -1,0 +1,40 @@
+@font-face {
+  font-family: "Proxima Nova";
+  font-style: normal;
+  src:
+    url("../public/fonts/ProximaNova-Regular.woff2") format("woff2"),
+    url("../public/fonts/ProximaNova-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Proxima Nova";
+  font-style: normal;
+  font-weight: 600;
+  src:
+    url("../public/fonts/ProximaNova-Semibold.woff2") format("woff2"),
+    url("../public/fonts/ProximaNova-Semibold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Proxima Nova";
+  font-style: normal;
+  font-weight: bold;
+  src:
+    url("../public/fonts/ProximaNova-Bold.woff2") format("woff2"),
+    url("../public/fonts/ProximaNova-Bold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Proxima Nova";
+  font-style: italic;
+  src:
+    url("../public/fonts/ProximaNova-RegularItalic.woff2") format("woff2"),
+    url("../public/fonts/ProximaNova-RegularItalic.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Proxima Nova Condensed";
+  src:
+    url("../public/fonts/ProximaNovaCond-Bold.woff2") format("woff2"),
+    url("../public/fonts/ProximaNovaCond-Bold.woff") format("woff");
+}

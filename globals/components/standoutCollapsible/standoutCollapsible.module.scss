@@ -1,0 +1,12 @@
+@import "@globals/styles/utils";
+@import '@globals/styles/components';
+
+.standoutCollapsible {
+  .standoutContainer {
+    overflow: hidden;
+    border-radius: $border-radius;
+    @include for(tablet) {
+      margin: 0 30px;
+    }
+  }
+}

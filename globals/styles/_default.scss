@@ -1,0 +1,112 @@
+html {
+  scroll-behavior: smooth;
+}
+
+// GLOBAL BODY STYLE
+body {
+  background-color: $body-bg-color;
+  color: $body-color;
+  font-family: $font-primary;
+  font-size: $body-font-xs;
+  line-height: $body-font-lh;
+  @include for(tablet) {
+    font-size: $body-font;
+  }
+}
+
+// CONTAINER
+// use this class to wrap elements that are not full-width
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 $global-padding;
+  @include for(tablet) {
+    max-width: 1100px;
+  }
+}
+
+// TYPOGRAPHY
+.h1-xl {
+  font-family: $font-secondary;
+  font-size: $h1-xl-xs;
+  line-height: normal;
+  @include for(tablet) {
+    font-size: $h1-xl;
+  }
+}
+
+h1,
+.h1 {
+  font-size: $h1-xs;
+  line-height: $h1-lh-xs;
+  @include for(tablet) {
+    font-size: $h1;
+    line-height: $h1-lh;
+  }
+}
+
+h2,
+.h2 {
+  font-size: $h2-xs;
+  line-height: $h2-lh-xs;
+  @include for(tablet) {
+    font-size: $h2;
+    line-height: $h2-lh;
+  }
+}
+
+h3,
+.h3 {
+  font-size: $h3-xs;
+  line-height: $h3-lh-xs;
+  @include for(tablet) {
+    font-size: $h3;
+    line-height: $h3-lh;
+  }
+}
+
+h4,
+.h4 {
+  font-size: $h4-xs;
+  line-height: $h4-lh-xs;
+  @include for(tablet) {
+    font-size: $h4;
+    line-height: $h4-lh;
+  }
+}
+
+.subheading {
+  font-size: $subheading-xs;
+  line-height: $subheading-lh-xs;
+  @include for(tablet) {
+    font-size: $subheading;
+    line-height: $subheading-lh;
+  }
+}
+
+a {
+  @include inline-link;
+}
+
+// FORMS
+label {
+  font-size: $form-label-font;
+  font-weight: bold;
+}
+
+// BUTTONS
+button,
+[type='button'],
+[type='reset'],
+[type='submit'] {
+  @include button;
+
+  &.secondary {
+    @include button(secondary);
+  }
+}
+
+// BADGES
+.badge {
+  @include badge;
+}

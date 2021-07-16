@@ -1,0 +1,18 @@
+@import '@globals/styles/utils';
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: $header-padding 0;
+  border-bottom: $header-border;
+}
+//.header
+
+.logo {
+  width: 95px;
+  @include for(laptop) {
+    width: 125px;
+  }
+}
+//.logo

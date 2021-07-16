@@ -1,0 +1,112 @@
+// https://bit.ly/3mTLUjK
+$body-color: $color-text-black;
+$body-bg-color: $color-white;
+
+/* GLOBALS */
+$grid-unit: 10px;
+$global-padding: $grid-unit * 2;
+$global-margin: $grid-unit * 2;
+$global-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+
+/* BORDERS */
+$border-thin: 1px solid;
+$border: 2px solid;
+$border-thick: 4px solid;
+$border-radius: 10px;
+$border-radius-xl: 25px;
+$border-color: $color-gray;
+
+/* TEXT LINKS */
+$link-color: $color-cyan;
+$link-decoration: none;
+$link-hover-color: $color-magenta;
+$link-hover-decoration: underline;
+
+/* BUTTONS */
+$button-padding: 10px;
+$button-min-height: 50px;
+$button-min-width: 330px; // desktop only
+$button-border-radius: 0;
+$button-outline-bg: $color-white;
+$button-outline-border: $border-thin;
+$button-disabled-bg: $color-gray;
+
+// primary button (cyan)
+$button-primary-bg: $color-cyan;
+$button-primary-bg-hover: $color-magenta;
+$button-primary-text-color: $color-white;
+// alternate (outline)
+$button-outline-primary: $button-primary-bg;
+$button-outline-primary-hover: $button-primary-bg-hover;
+
+// secondary button (magenta)
+$button-secondary-bg: $color-magenta;
+$button-secondary-bg-hover: $color-magenta-dark;
+$button-secondary-text-color: $color-white;
+// alternate (outline)
+$button-outline-secondary: $button-secondary-bg;
+$button-outline-secondary-hover: $button-secondary-bg-hover;
+
+// disabled state
+$button-disabled-bg: $color-gray;
+$button-disabled-text-color: $color-white;
+$button-disabled-border-color: transparent;
+
+/* STANDOUT COLLAPSIBLE */
+$standout-collapsible-bg: $color-gold-lighter;
+$standout-collapsible-content-bg: $color-gold-lightest;
+
+/* CARDS */
+$card-bg: $color-gold-lightest;
+$card-bg-img-color: $color-gold-lighter;
+$card-padding: $grid-unit * 3;
+$card-border-color: $color-gray;
+$card-border-radius: $border-radius;
+$card-box-shadow: $global-box-shadow;
+$card-footer-bg: $color-cyan-light;
+$card-footer-collapsible-bg: $color-cyan-lighter;
+
+/* BADGES (pills) */
+$badge-height: 35px;
+$badge-max-height: 50px;
+$badge-padding: 5px 20px;
+$badge-padding-xs: 10px;
+$badge-border-radius: $border-radius;
+$badge-background-color: $color-cyan-lighter;
+
+/* HEADER */
+$header-max-height: 55px;
+$header-border: $border-thin $color-gray-lighter;
+$header-padding: 20px;
+
+/* FOOTER */
+$footer-bg: $color-gold-lightest;
+$footer-color: $color-gray-dark;
+$footer-padding-xs: 30px 0;
+$footer-padding: 40px 0;
+$footer-font-size: $small;
+$footer-font-lh: $small-lh;
+$footer-link-color: $color-black;
+
+/* HERO */
+$hero-bg: $color-gray-lighter;
+$hero-border: $border-thin $color-gray-light;
+
+/* MODAL */
+$modal-bg: $color-white;
+$modal-scrim: rgba(0, 0, 0, 0.65);
+$modal-padding: 50px;
+
+/* SCROLL TO TOP */
+$scroll-margin: 50px 0;
+$scroll-margin-xs: 40px 0;
+
+/* TABS */
+$tabs-border: $border-thin $border-color;
+$tabs-border-radius: 20px;
+$tabs-button-primary-bg: $color-cyan-light;
+$tabs-button-primary-bg-hover: $color-white;
+$tabs-button-primary-text-color: $color-cyan-dark;
+$tabs-margin: 50px;
+$tabs-padding: 50px;
+$tabs-padding-xs: 30px 20px;

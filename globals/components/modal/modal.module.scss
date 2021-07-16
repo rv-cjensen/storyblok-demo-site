@@ -1,0 +1,43 @@
+@import '@globals/styles/components';
+
+.modalTrigger {
+  width: 100%;
+  font-weight: normal;
+  text-transform: none;
+
+  span {
+    pointer-events: none; // ensure events fire when button text is clicked
+  }
+}
+
+.overlay {
+  position: fixed;
+  z-index: 10; // make sure the modal overlaps anything with wierd z-index
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: $modal-scrim;
+}
+
+.modal {
+  position: relative;
+  top: 50%;
+  margin: 20px; // mobile
+  padding: $modal-padding;
+  transform: translateY(-50%);
+  background-color: $modal-bg;
+
+  @include for(tablet) {
+    max-width: 750px;
+    margin: auto;
+  }
+
+  .closeIcon {
+    @include button(reset);
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: $global-padding;
+  }
+}

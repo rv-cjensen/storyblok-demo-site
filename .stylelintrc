@@ -1,0 +1,9 @@
+{
+  "extends" : "@redventures/stylelint-config-rv",
+  "rules" : {
+    "max-nesting-depth": null,
+    "order/order": null,
+    "selector-max-compound-selectors": null,
+    "declaration-block-single-line-max-declarations": 1
+  }
+}

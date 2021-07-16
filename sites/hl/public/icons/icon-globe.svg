@@ -1,0 +1,11 @@
+<svg viewBox="0 0 34 34" xmlns="http://www.w3.org/2000/svg">
+	<title>
+		Globe Icon
+	</title>
+	<g fill="none">
+		<circle stroke="currentColor" stroke-width="2" cx="17" cy="17" r="16" />
+		<path d="M17 22a21.9 21.9 0 0113.04 4.28 15.98 15.98 0 01-26.08 0A21.9 21.9 0 0117 22zm0-21a16 16 0 0113.9 8.06A21.9 21.9 0 0117 14 21.9 21.9 0 013.1 9.06 16 16 0 0117 1z" stroke="currentColor" stroke-width="2" />
+		<ellipse stroke="currentColor" stroke-width="2" cx="17" cy="17" rx="7" ry="16" />
+		<path fill="currentColor" d="M16 1h2v32h-2z" />
+	</g>
+</svg>

@@ -1,0 +1,19 @@
+{
+  "name": "hl",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "build": "next build && next export -o dist",
+    "start": "open http://localhost:3000 && next dev"
+  },
+  "dependencies": {
+    "next": "10.1.3",
+    "next-transpile-modules": "^6.4.0",
+    "prop-types": "^15.7.2",
+    "react": "17.0.2"
+  },
+  "devDependencies": {
+    "react-dom": "17.0.2",
+    "sass": "^1.32.11"
+  }
+}

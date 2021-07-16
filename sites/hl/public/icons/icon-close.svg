@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+	<title>
+		Close Icon
+	</title>
+	<path transform="rotate(45,8,8)" fill="currentColor" fill-rule="evenodd" d="M7.98 0c.64 0 1.15.52 1.15 1.15v5.72h5.72a1.15 1.15 0 110 2.3H9.13l.01 5.74C9.11 15.52 8.61 16 8 16c-.3 0-.58-.12-.8-.32-.22-.2-.35-.49-.36-.8V9.17H1.09A1.15 1.15 0 010 8.01c0-.62.49-1.13 1.11-1.14h5.72V1.15C6.83.52 7.34 0 7.98 0z" />
+</svg>

@@ -1,0 +1,128 @@
+@import '@globals/styles/utils/media-queries';
+
+/***
+* $type: primary | secondary | transparent | reset
+* $style: none | outline
+***/
+
+@mixin button($type: primary, $style: none) {
+  @if $type == reset {
+    width: auto;
+    min-width: auto;
+    min-height: auto;
+    background-color: unset;
+    color: unset;
+    line-height: 1;
+    text-transform: none;
+
+    &:hover,
+    &:focus,
+    &:active,
+    &.active {
+      color: inherit;
+    }
+  } @else {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: $button-min-height;
+    padding: $button-padding;
+    transition: background-color 0.2s ease-in;
+    border-radius: $button-border-radius;
+    font-size: $button-font-xs;
+    font-weight: 600;
+    text-transform: uppercase;
+
+    @include for(laptop) {
+      width: auto;
+      min-width: $button-min-width;
+      font-size: $button-font;
+    }
+
+    &:not(:disabled) {
+      @if $style == outline {
+        transition: border-color 0.2s;
+        border: $button-outline-border;
+        background-color: $button-outline-bg;
+        @if $type == primary {
+          border-color: $button-outline-primary;
+          color: $button-outline-primary;
+
+          &:hover,
+          &:focus,
+          &.active {
+            border-color: $button-outline-primary-hover;
+            color: $button-outline-primary-hover;
+          }
+        } @else if $type == secondary {
+          border-color: $button-outline-secondary;
+          color: $button-outline-secondary;
+
+          &:hover,
+          &:focus,
+          &.active {
+            border-color: $button-outline-secondary-hover;
+            color: $button-outline-secondary-hover;
+          }
+        } @else if $type == transparent {
+          border-color: transparent;
+          background-color: transparent;
+          color: $body-color;
+
+          &:hover,
+          &:focus,
+          &.active {
+            border-color: lighten($body-color, 65%);
+            color: lighten($body-color, 25%);
+          }
+        }
+      } @else {
+        @if $type == primary {
+          background-color: $button-primary-bg;
+          color: $button-primary-text-color;
+
+          &:hover,
+          &:focus,
+          &.active {
+            background-color: $button-primary-bg-hover;
+          }
+        } @else if $type == secondary {
+          background-color: $button-secondary-bg;
+          color: $button-secondary-text-color;
+
+          &:hover,
+          &:focus,
+          &.active {
+            background-color: $button-secondary-bg-hover;
+          }
+        } @else if $type == transparent {
+          background-color: transparent;
+          color: $body-color;
+
+          &:hover,
+          &:focus,
+          &.active {
+            color: lighten($body-color, 25%);
+          }
+        }
+      }
+    }
+  }
+
+  &:disabled {
+    border-color: $button-disabled-border-color;
+    background-color: $button-disabled-bg;
+    color: $button-disabled-text-color;
+  }
+}
+
+@mixin inline-link {
+  color: $link-color;
+
+  &:hover,
+  &:focus,
+  &.active {
+    color: $link-hover-color;
+  }
+}

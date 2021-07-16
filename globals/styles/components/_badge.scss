@@ -1,0 +1,16 @@
+@mixin badge($bgColor: #f0efef) {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: $badge-height;
+  padding: $badge-padding-xs;
+  border-radius: $badge-border-radius;
+  background-color: $bgColor;
+  font-size: $badge-font-xs;
+  font-weight: bold;
+  text-align: center;
+  @include for(laptop) {
+    padding: $badge-padding;
+    font-size: $badge-font;
+  }
+}

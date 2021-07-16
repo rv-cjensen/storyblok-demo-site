@@ -1,0 +1,21 @@
+@mixin card($bgColor: transparent, $borderColor: transparent) {
+  padding: $card-padding;
+  overflow: hidden;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: $card-border-radius;
+  border-color: $borderColor;
+  background-color: $bgColor;
+}
+
+@mixin card-header($bgColor: transparent) {
+  // force the header to overlap its container's padding
+  margin: (-$card-padding) (-$card-padding) 0 (-$card-padding);
+  background-color: $bgColor;
+}
+
+@mixin card-footer($bgColor: transparent) {
+  // force the footer to overlap its container's padding
+  margin: 0 (-$card-padding) (-$card-padding) (-$card-padding);
+  background-color: $bgColor;
+}

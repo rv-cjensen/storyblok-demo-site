@@ -1,0 +1,29 @@
+.rich-text {
+  h1,
+  h2,
+  h3,
+  h4 {
+    margin-bottom: 10px;
+    font-family: $font-primary;
+  }
+
+  p {
+    a {
+      @include inline-link;
+      text-decoration: underline;
+    }
+  }
+
+  p:not(:last-child) {
+    margin-bottom: 10px;
+  }
+
+  ul,
+  ol {
+    padding-left: $global-padding;
+
+    li {
+      margin-bottom: $grid-unit;
+    }
+  }
+}

@@ -1,0 +1,41 @@
+@import '@globals/styles/utils';
+
+.footer {
+  display: flex;
+  align-items: center;
+  padding: $footer-padding-xs;
+  background-color: $footer-bg;
+  color: $footer-color;
+  font-size: $footer-font-size;
+  line-height: $footer-font-lh;
+
+  @include for(tablet) {
+    padding: $footer-padding;
+  }
+
+  .menu {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    @include for(tablet) {
+      flex-direction: row;
+    }
+
+    li {
+      margin: 0 20px 20px 0;
+
+      a {
+        color: $footer-link-color;
+        font-weight: 600;
+
+        &:hover {
+          color: $link-hover-color;
+        }
+      }
+    }
+  }
+}
+//.footer

@@ -1,0 +1,37 @@
+@import 'map-get-next';
+
+$breakpoints: (
+  mobile: 0,
+  mobile-landscape: 640px,
+  tablet: 720px,
+  laptop: 1280px,
+  desktop: 1920px,
+);
+
+// for "this breakpoint and up"
+@mixin for($key) {
+  $width: map-get($breakpoints, $key);
+  @if $width != null {
+    @media screen and (min-width: $width) {
+      @content;
+    }
+  } @else {
+    @content;
+  }
+}
+
+// only "the specified breakpoint"
+@mixin only($key) {
+  $width: map-get($breakpoints, $key);
+  $next-width: map-get-next($breakpoints, $key);
+
+  @if ($width != null) and ($next-width != false) {
+    @media screen and (min-width: $width) and (max-width: $next-width) {
+      @content;
+    }
+  } @else if $width != null {
+    @media screen and (min-width: $width) {
+      @content;
+    }
+  }
+}

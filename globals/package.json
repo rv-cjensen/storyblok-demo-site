@@ -1,0 +1,12 @@
+{
+  "name": "@hw-landing-pages/globals",
+  "version": "1.0.0",
+  "main": "components",
+  "dependencies": {
+    "next": "^10.2.0",
+    "prop-types": "^15.7.2",
+    "react": "^17.0.2",
+    "react-inlinesvg": "^2.3.0",
+    "react-modal": "^3.13.1"
+  }
+}

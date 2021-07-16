@@ -1,0 +1,28 @@
+@import "@globals/styles/utils";
+
+.disclaimer {
+  white-space: pre-wrap;
+
+  .disclaimerContainer {
+    margin: 50px 0;
+
+    @include for (tablet) {
+      margin: 50px 30px;
+    }
+  }
+  //.disclaimerContainer
+
+  .disclaimerHeader {
+    margin-bottom: 10px;
+    font-size: $h2-xs;
+    font-weight: bold;
+    line-height: $h2-lh-xs;
+
+    @include for(tablet) {
+      font-size: $h2;
+      line-height: $h2-lh;
+    }
+  }
+  //.disclaimerHeader
+}
+//.disclaimer

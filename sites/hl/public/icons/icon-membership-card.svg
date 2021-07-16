@@ -1,0 +1,12 @@
+<svg viewBox="0 0 33 32" xmlns="http://www.w3.org/2000/svg">
+	<title>
+		Membership Card Icon
+	</title>
+	<g fill="none">
+		<path fill="currentColor" d="M23.5 12.5l-2.94 1.55.56-3.28-2.38-2.32 3.3-.47L23.5 5l1.47 2.98 3.29.47-2.38 2.32.56 3.28z" />
+		<rect stroke="currentColor" stroke-width="2" x="1" y="1" width="31" height="30" rx="4" />
+		<rect stroke="currentColor" stroke-width="2" x="5" y="5" width="9" height="10" rx="2" />
+		<rect stroke="currentColor" stroke-width="2" x="5" y="20" width="23" height="1" rx=".5" />
+		<rect stroke="currentColor" stroke-width="2" x="5" y="25" width="23" height="1" rx=".5" />
+	</g>
+</svg>

@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="45" height="51" viewBox="0 0 45 51">
+  <g fill="none" fill-rule="evenodd" transform="translate(-1)">
+    <g transform="translate(2.848 3.915)">
+      <rect width="9.967" height="4.699" x="25.629" y="32.89" fill="#02ADB9" rx="1.566"/>
+      <rect width="4.271" height="10.963" x="31.324" y="20.36" fill="#02ADB9" rx="1.566"/>
+      <rect width="4.271" height="10.963" x="25.629" y="20.36" fill="#02ADB9" rx="1.566"/>
+      <rect width="4.271" height="4.699" x="5.695" y="20.36" fill="#02ADB9" rx="1.566"/>
+      <rect width="4.271" height="4.699" x="11.39" y="20.36" fill="#02ADB9" rx="1.566"/>
+      <rect width="4.271" height="4.699" x="17.086" y="20.36" fill="#02ADB9" rx="1.566"/>
+      <rect width="4.271" height="4.699" x="17.086" y="26.625" fill="#02ADB9" rx="1.566"/>
+      <rect width="4.271" height="4.699" x="17.086" y="32.89" fill="#02ADB9" rx="1.566"/>
+      <rect width="4.271" height="4.699" x="11.39" y="26.625" fill="#02ADB9" rx="1.566"/>
+      <rect width="4.271" height="4.699" x="11.39" y="32.89" fill="#02ADB9" rx="1.566"/>
+      <rect width="4.271" height="4.699" x="5.695" y="26.625" fill="#02ADB9" rx="1.566"/>
+      <rect width="4.271" height="4.699" x="5.695" y="32.89" fill="#02ADB9" rx="1.566"/>
+    </g>
+    <rect width="41.29" height="46.986" x="2.848" y="1.566" stroke="#02ADB9" stroke-width="3.132" rx="12.53"/>
+    <rect width="27.052" height="7.831" x="9.967" y="9.397" stroke="#02ADB9" stroke-width="3.132" rx="1.566"/>
+  </g>
+</svg>

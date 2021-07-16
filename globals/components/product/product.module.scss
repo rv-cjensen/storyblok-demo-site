@@ -1,0 +1,170 @@
+@import '@globals/styles/utils';
+@import '@globals/styles/components';
+
+.productCard {
+  @include card($color-white, $card-border-color);
+  margin-top: 50px;
+  box-shadow: $card-box-shadow;
+
+  header {
+    @include for(tablet) {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .h2,
+    .h3 {
+      font-weight: bold;
+    }
+
+    .h2 {
+      margin-bottom: 10px;
+      font-size: $h2-xs;
+      line-height: $h2-lh-xs;
+      @include for(tablet) {
+        font-size: $h2;
+        line-height: $h2-lh;
+      }
+    }
+
+    .h3 {
+      font-size: $h3-xs;
+      line-height: $h3-lh-xs;
+      @include for(tablet) {
+        font-size: $h3;
+        line-height: $h3-lh;
+      }
+    }
+
+    .badge {
+      @include badge($badge-background-color);
+      display: flex;
+      margin-top: $global-margin;
+      @include for(tablet) {
+        display: inline-flex;
+        margin: 0;
+      }
+    }
+
+    .price {
+      @include badge($badge-background-color);
+      display: none;
+      @include for(tablet) {
+        display: inline-flex;
+        font-size: $badge-price;
+      }
+    }
+
+    .priceMobile {
+      @include badge($badge-background-color);
+      display: block;
+      margin-left: 10px;
+      float: right;
+      font-size: $badge-price-xs;
+      @include for(tablet) {
+        display: none;
+      }
+    }
+  }
+
+  .cardBody {
+    padding: $card-padding 0;
+    @include for(tablet) {
+      display: flex;
+      gap: 50px;
+      justify-content: space-between; // fallback if gap is not supported
+    }
+
+    .cardImage {
+      @include card($color-white, $card-border-color);
+      box-shadow: $card-box-shadow;
+      @include for(tablet) {
+        display: flex;
+        flex: 0 0 330px;
+        align-items: center;
+        justify-content: center;
+        height: 275px;
+        transition: transform 0.2s linear;
+
+        &:hover {
+          transform: scale(1.01);
+          transition: transform 0.2s linear;
+        }
+      }
+
+      // make the anchor cover the whole card
+      > a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+
+        > img {
+          width: auto;
+          max-width: 100%;
+        }
+      }
+    }
+
+    .cardContent {
+      @include for(tablet) {
+        position: relative;
+        flex: 1 1 600px;
+        // offset for abs pos button
+        .list {
+          padding-bottom: 60px;
+        }
+      }
+
+      .list {
+        padding-left: 0;
+        list-style: none;
+
+        li {
+          display: flex;
+          margin-bottom: $global-margin;
+
+          @include for(tablet) {
+            align-items: center;
+          }
+
+          .icon {
+            overflow: visible; // force icon to scale to height/width attributes
+            color: $link-color;
+          }
+
+          .listText {
+            margin-left: $global-margin;
+          }
+        }
+      }
+
+      .cta {
+        @include button(secondary);
+        margin: 40px 0;
+        @include for(tablet) {
+          position: absolute;
+          right: 0;
+          bottom: 0;
+          margin: 0;
+        }
+      }
+    }
+  }
+
+  // TODO: REFACTOR COLLAPSIBLE FOR BETTER SHARING
+  footer {
+    @include card-footer($card-footer-bg);
+
+    :global(.collapsibleTrigger) {
+      justify-content: flex-start !important;
+      padding: $global-padding $card-padding !important;
+      background-color: $card-footer-bg !important;
+    }
+
+    :global(.collapsibleContent) {
+      background-color: $card-footer-collapsible-bg;
+    }
+  }
+}

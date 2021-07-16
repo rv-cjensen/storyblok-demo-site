@@ -1,0 +1,8 @@
+// SVG BACKGROUND SHAPE
+@mixin bgWave($color: #000) {
+  $cleanColor: str-slice(quote(#{$color}), 2); // strip the hex character
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' preserveAspectRatio='none' viewBox='0 0 800 400'><path fill='%23#{$cleanColor}' d='M0 337c31.436-31.119 83.242-57.298 148-76 64.689-18.366 173.497-19.537 242.67-46.639C451.439 190.813 494.157 182.761 592 103 690.735 23.045 723.152 17.015 800 0v400H0v-63z'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  background-size: cover;
+}
