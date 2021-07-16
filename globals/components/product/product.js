@@ -1,6 +1,4 @@
 import PropTypes from 'prop-types';
-import SVG from 'react-inlinesvg';
-import Collapsible from '../collapsible/collapsible';
 import styles from './product.module.scss';
 
 export default function Product({ product }) {
@@ -81,30 +79,8 @@ export default function Product({ product }) {
           >
             {product.buttonCTA}
           </a>
-          {/* <ul className={styles.list}>
-            {product.list.map((item, productIndex) => (
-              <li key={productIndex}>
-                <SVG
-                  src={`${process.env.IMAGE_PREFIX}${item.icon}`}
-                  className={styles.icon}
-                  height='100%'
-                  width={50}
-                />
-                <span className={styles.listText}>{item.text}</span>
-              </li>
-            ))}
-          </ul> */}
         </div>
       </div>
-      {/* {product.collapsible && (
-        <footer>
-          <Collapsible
-            triggerText={product.collapsible.triggerText}
-            triggerTagularName={product.collapsible.triggerTagularName}
-            content={product.collapsible.content}
-             />
-        </footer>
-      )} */}
     </section>
   );
 }

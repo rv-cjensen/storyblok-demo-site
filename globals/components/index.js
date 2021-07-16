@@ -1,13 +1,9 @@
 export { default as SharedSiteHead } from './sharedSiteHead/sharedSiteHead.js';
-export { default as Collapsible } from './collapsible/collapsible.js';
 export { default as Hero } from './hero/hero.js';
 export { default as Modal } from './modal/modal.js';
 export { default as Products } from './products/products.js';
 export { default as Standout } from './standout/standout.js';
-export { default as Tabs } from './tabs/tabs.js';
 export { default as Disclaimer } from './disclaimer/disclaimer.js';
-export { default as Scroll } from './scroll/scroll.js';
-export { default as StandoutCollapsible } from './standoutCollapsible/standoutCollapsible.js';
 export { default as DynamicComponent } from './dynamicComponent/dynamicComponent.js';
 export { default as BlokPage } from './blokPage/blokPage.js';
 export { default as Character } from './character/character.js';

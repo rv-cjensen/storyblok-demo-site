@@ -1,21 +1,14 @@
 import Head from 'next/head';
-import Link from 'next/link';
 import Storyblok from '@libs/storyblok';
 import { DynamicComponent } from '@globals/components';
 
-export default function Home({ story, preview }) {
+export default function Home({ story }) {
   return (
     <div>
       <Head>
-        <title>Create Next App</title>
+        <title>Storyblok Demo Site</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
-      <section className="container">
-        <h1>
-          <Link href="/mental-health/landing-best-online-therapy">Go To Demo Landing Page</Link>
-        </h1>
-      </section>
 
       <DynamicComponent blok={story.content} />
     </div>
