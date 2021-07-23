@@ -11,8 +11,14 @@
 
 .logo {
   width: 95px;
+  margin: 0 auto;
   @include for(laptop) {
     width: 125px;
   }
 }
 //.logo
+
+.nav {
+  list-style-type: none;
+  padding: 0;
+}

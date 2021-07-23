@@ -1,9 +1,12 @@
+// StoryBlok Specific
+export { default as BlokPage } from './blokPage/blokPage.js';
+export { default as RightRail } from './rightRail/rightRail.js';
+export { default as DynamicComponent } from './dynamicComponent/dynamicComponent.js';
+// Global Components
 export { default as SharedSiteHead } from './sharedSiteHead/sharedSiteHead.js';
 export { default as Hero } from './hero/hero.js';
-export { default as Modal } from './modal/modal.js';
-export { default as Products } from './products/products.js';
-export { default as Standout } from './standout/standout.js';
-export { default as Disclaimer } from './disclaimer/disclaimer.js';
-export { default as DynamicComponent } from './dynamicComponent/dynamicComponent.js';
-export { default as BlokPage } from './blokPage/blokPage.js';
 export { default as Character } from './character/character.js';
+export { default as Characters } from './characters/characters.js';
+export { default as Branch } from './branch/branch.js';
+export { default as Branches } from './branches/branches.js';
+export { default as ContentBlock } from './contentBlock/contentBlock.js';

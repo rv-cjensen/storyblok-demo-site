@@ -2,11 +2,13 @@ import Head from 'next/head';
 import Storyblok from '@libs/storyblok';
 import { DynamicComponent } from '@globals/components';
 
-export default function Home({ story }) {
+export default function Home({ home }) {
+  const story = home.story;
+
   return (
     <div>
       <Head>
-        <title>Storyblok Demo Site</title>
+        <title>The Office</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
@@ -15,30 +17,27 @@ export default function Home({ story }) {
   );
 }
 
-export async function getStaticProps(context) {
-  // the slug of the story
-  let slug = "home"
+async function getHomeStory() {
   // the storyblok params
   let params = {
     version: "draft", // or 'published'
-  }
-
-  // checks if Next.js is in preview mode
-  if (context.preview) {
-    // loads the draft version
-    params.version = "draft"
-    // appends the cache version to get the latest content
-    params.cv = Date.now()
-  }
+    cv: Date.now(),
+    resolve_relations: 'Branches.list,Characters.list',
+  };
 
   // loads the story from the Storyblok API
-  let { data } = await Storyblok.get(`cdn/stories/${slug}`, params)
+  let { data } = await Storyblok.get(`cdn/stories/home`, params);
+
+  return data;
+}
+
+export async function getStaticProps(context) {
+  const homeStory = await getHomeStory();
 
   // return the story from Storyblok and whether preview mode is active
   return {
     props: {
-      story: data ? data.story : false,
-      preview: context.preview || false
+      home: homeStory ? homeStory : false,
     },
     revalidate: 3600, // revalidate every hour
   }

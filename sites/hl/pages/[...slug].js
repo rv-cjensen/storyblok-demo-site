@@ -3,7 +3,10 @@ import Storyblok from "@libs/storyblok";
 import { DynamicComponent } from "@globals/components";
 
 export async function getStaticPaths() {
-  let { data } = await Storyblok.get("cdn/links/");
+  let { data } = await Storyblok.get("cdn/links/", {
+    cv: Date.now(),
+    version: 'draft',
+  });
 
   let paths = [];
   Object.keys(data.links).forEach((linkKey) => {
@@ -13,7 +16,6 @@ export async function getStaticPaths() {
 
     // get array for slug because of catch all
     const { slug } = data.links[linkKey];
-    console.log(slug);
     let splittedSlug = slug.split("/");
     paths.push({ params: { slug: splittedSlug } });
   });
@@ -24,10 +26,8 @@ export async function getStaticPaths() {
   };
 }
 
-export async function getStaticProps({ params, preview = false }) {
-  console.log('REALS::::', params.slug);
+export async function getStaticProps({ params, preview = true }) {
   let slug = params.slug ? params.slug.join("/") : "home";
-
   let sbParams = {
     version: "draft", // or published
   };
@@ -48,7 +48,7 @@ export async function getStaticProps({ params, preview = false }) {
   };
 }
 
-export default function BlokPage({ story, preview }) {
+export default function SlugPage({ story }) {
   return (
     <>
       <Head>

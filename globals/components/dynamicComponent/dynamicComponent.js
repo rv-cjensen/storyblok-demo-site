@@ -8,7 +8,9 @@ export default function DynamicComponent({blok}) {
   if (typeof GlobalComponents[blok.component] !== 'undefined') {
     const Component = GlobalComponents[blok.component]
     // wrap with SbEditable for visual editing
-    return isPreview ? (<SbEditable content={blok}><Component blok={blok} /></SbEditable>) : <Component blok={blok} />
+    return isPreview
+      ? (<SbEditable content={blok}><Component blok={blok} /></SbEditable>)
+      : <Component blok={blok} />
   }
 
   // fallback if the component doesn't exist
